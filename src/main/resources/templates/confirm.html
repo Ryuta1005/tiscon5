@@ -22,52 +22,55 @@
     お見積り情報確認
     <!-- りゅうちぇる追加分END4  -->
     <h1>お見積り情報確認</h1>
-    <ul th:if="${#fields.hasErrors('all')}">
-      <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
-    </ul>
+<!--    <ul th:if="${#fields.hasErrors('all')}">-->
+<!--   <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>&ndash;&gt;-->
+
+<!--    </ul>-->
     <div class="col-sm-12">
       <h4>個人情報</h4>
       <table class="table table-bordered">
         <col span="1" style="background-color: #A9B7C7;">
         <col span="2" style="background-color: #FFFFFF;">
         <tbody>
+
         <tr>
+
           <th style="width: 40%">氏名</th>
-          <td><span th:text="*{customerName}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('customerName')}" class="text-danger" th:errors="*{customerName}">Error</span><span th:text="*{customerName}"></span></td>
           <input type="hidden" name="customerName" id="customerName" th:value="*{customerName}"/>
         </tr>
         <tr>
           <th>連絡先TEL</th>
-          <td><span th:text="*{tel}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('tel')}" class="text-danger" th:errors="*{tel}">Error</span><span th:text="*{tel}"></span></td>
           <input type="hidden" name="tel" id="tel" th:value="*{tel}"/>
         </tr>
         <tr>
           <th>連絡先メールアドレス</th>
-          <td><span th:text="*{email}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('email')}" class="text-danger" th:errors="*{email}">Error</span><span th:text="*{email}"></span></td>
           <input type="hidden" name="email" id="email" th:value="*{email}"/>
         </tr>
         <tr>
           <th>転居元住所（都道府県）</th>
-          <td>
+          <td> <span th:if="${#fields.hasErrors('oldPrefectureId')}" class="text-danger" th:errors="*{oldPrefectureId}">Error</span>
             <span th:each="prefecture : ${prefectures}" th:text="${prefecture.prefectureName}" th:if="${prefecture.prefectureId}==*{oldPrefectureId}">東京</span>
           </td>
           <input type="hidden" name="oldPrefectureId" id="oldPrefectureId" th:value="*{oldPrefectureId}"/>
         </tr>
         <tr>
           <th>転居元住所（市区町村以下）</th>
-          <td><span th:text="*{oldAddress}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('oldAddress')}" class="text-danger" th:errors="*{oldAddress}">Error</span><span th:text="*{oldAddress}"></span></td>
           <input type="hidden" name="oldAddress" id="oldAddress" th:value="*{oldAddress}"/>
         </tr>
         <tr>
           <th>転居先住所（都道府県）</th>
-          <td>
+          <td> <span th:if="${#fields.hasErrors('newPrefectureId')}" class="text-danger" th:errors="*{newPrefectureId}">Error</span>
             <span th:each="prefecture : ${prefectures}" th:text="${prefecture.prefectureName}" th:if="${prefecture.prefectureId}==*{newPrefectureId}">大阪</span>
           </td>
           <input type="hidden" name="newPrefectureId" id="newPrefectureId" th:value="*{newPrefectureId}"/>
         </tr>
         <tr>
           <th>転居先住所（市区町村以下）</th>
-          <td><span th:text="*{newAddress}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('newAddress')}" class="text-danger" th:errors="*{newAddress}">Error</span><span th:text="*{newAddress}"></span></td>
           <input type="hidden" name="newAddress" id="newAddress" th:value="*{newAddress}"/>
         </tr>
         </tbody>
@@ -79,22 +82,22 @@
         <tbody>
         <tr>
           <th style="width: 40%">段ボールの個数</th>
-          <td><span th:text="*{box}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('box')}" class="text-danger" th:errors="*{box}">Error</span><span th:text="*{box}"></span></td>
           <input type="hidden" name="box" id="box" th:value="*{box}"/>
         </tr>
         <tr>
           <th>ベッドの個数</th>
-          <td><span th:text="*{bed}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('bed')}" class="text-danger" th:errors="*{bed}">Error</span><span th:text="*{bed}"></span></td>
           <input type="hidden" name="bed" id="bed" th:value="*{bed}"/>
         </tr>
         <tr>
           <th>自転車の個数</th>
-          <td><span th:text="*{bicycle}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('bicycle')}" class="text-danger" th:errors="*{bicycle}">Error</span><span th:text="*{bicycle}"></span></td>
           <input type="hidden" name="bicycle" id="bicycle" th:value="*{bicycle}"/>
         </tr>
         <tr>
           <th>洗濯機の個数</th>
-          <td><span th:text="*{washingMachine}"></span></td>
+          <td> <span th:if="${#fields.hasErrors('washingMachine')}" class="text-danger" th:errors="*{washingMachine}">Error</span><span th:text="*{washingMachine}"></span></td>
           <input type="hidden" name="washingMachine" id="washingMachine" th:value="*{washingMachine}"/>
         </tr>
         <tr>
