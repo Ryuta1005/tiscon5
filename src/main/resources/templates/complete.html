@@ -12,10 +12,26 @@
 <body>
 
 <nav th:insert="header.html :: header"></nav>
+<!-- りゅうちぇる追加分START2  -->
+<a href="../">トップ</a>
+＞
+<a href="../input">お見積り情報入力</a>
+＞
+<a href="../confirm">お見積り情報確認</a>
+＞
+<a href="../result">概算お見積り結果</a>
+＞
+お申込み完了
+<!-- りゅうちぇる追加分END2  -->
   <div class="ui main container">
+
     <div class="text-center">
       <h2>申し込みが完了しました。</h2>
       <p>お電話にて正確な見積もり結果をお伝えいたします。</p>
+
+<!-- りゅうちぇる追加分START1  -->
+      <a href="../">最初に戻る</a>
+<!-- りゅうちぇる追加分END1-->
     </div>
   </div>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>

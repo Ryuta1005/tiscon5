@@ -1,3 +1,19 @@
+.form-control-lay1{
+ width:180px;
+ }
+ .form-control-lay2{
+ width:360px;
+ }
+ .form-control-lay3{
+ width:75%;
+ }
+ .form-control-lay4{
+ width:100%;
+ }
+ .form-control-layA{float:left;
+ margin-right:40px;}
+
+
 body {
     background: #edf9f9;
     background-size: cover;
