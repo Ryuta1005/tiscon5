@@ -54,7 +54,7 @@ $(function(){
         <div class="form-group">
           <label for="tel">連絡先TEL</label>
           <span th:if="${#fields.hasErrors('tel')}" class="text-danger" th:errors="*{tel}">Error</span>
-          <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control form-control-lay1" value="03-1234-5678"/>
+          <input type="text" id="tel" name="tel" th:field="*{tel}" class="form-control form-control-lay1" value="03-1234-5678"/>
         </div>
         <div class="form-group">
           <label for="email">連絡先メールアドレス</label>
