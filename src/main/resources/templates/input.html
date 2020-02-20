@@ -14,8 +14,15 @@
 <nav th:insert="header.html :: header"></nav>
 <div class="container">
   <!-- りゅうちぇる追加分START5  -->
-  <a href="../">トップ</a>
-  ＞お見積り情報入力
+  トップ
+  ＞
+  <b>お見積り情報入力</b>
+  ＞
+  お見積り情報確認
+  ＞
+  概算お見積り結果
+  ＞
+  お申込み完了
   <!-- りゅうちぇる追加分END5  -->
   <form th:action="@{/submit}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <h1>お見積り情報入力</h1>
