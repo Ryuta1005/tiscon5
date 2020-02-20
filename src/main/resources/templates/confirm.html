@@ -13,6 +13,7 @@
 <body>
 <nav th:insert="header.html :: header"></nav>
 <div class="container">
+  <div class="con-box">
   <form th:action="@{/result}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <!-- りゅうちぇる追加分START4  -->
     トップ
@@ -119,6 +120,7 @@
       </div>
     </div>
   </form>
+  </div>
 </div>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
 <script src="../js/popper.min.js" th:src="@{/js/popper.min.js}"></script>

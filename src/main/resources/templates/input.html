@@ -13,6 +13,7 @@
 <body>
 <nav th:insert="header.html :: header"></nav>
 <div class="container">
+  <div class="con-box">
   <!-- りゅうちぇる追加分START5  -->
   トップ
   ＞
@@ -24,6 +25,20 @@
   ＞
   お申込み完了
   <!-- りゅうちぇる追加分END5  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+    <script>
+$(function(){
+  $("input[type=text]").keypress(function(ev) {
+    if ((ev.which && ev.which === 13) ||
+        (ev.keyCode && ev.keyCode === 13)) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+});
+</script>
   <form th:action="@{/submit}" th:object="${userOrderForm}" class="form-horizontal" method="post">
     <h1>お見積り情報入力</h1>
 
@@ -112,6 +127,7 @@
       </div>
     </div>
   </form>
+  </div>
 </div>
 <script src="../js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
 <script src="../js/popper.min.js" th:src="@{/js/popper.min.js}"></script>

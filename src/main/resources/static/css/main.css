@@ -1,3 +1,7 @@
+.con-box{width:90%;
+margin:0 auto;
+margin-top:20px;
+background-color:white;}
 .form-control-lay1{
  width:180px;
  }
@@ -15,13 +19,17 @@
 
 
 body {
-    background: #edf9f9;
+    background: #f0eef0;
     background-size: cover;
     background-attachment: fixed;
     padding: 0;
     margin: 0;
 }
+.header_logo{width:120px;
+height:65px;
+background-image: url("../img/図5.png");
 
+}
 .jumbotron {
     background-repeat: no-repeat;
     background-position: calc(60%) calc(70%);
